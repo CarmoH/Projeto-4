@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho Wall-E</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background:black;
+            font-family: Arial, sans-serif;
+        }
+        .stars{ 
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: #ffffff;
+        }
+        button {
+            padding: 10px 30px; 
+            font-size: 20px; 
+            font-weight: 700; 
+            border-width: 5px;
+            margin: 20px;
+            width: 150px; 
+            height: 90px;
+            color: black;
+            background: white;
+            text-align: center;
+            cursor: pointer; 
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+            z-index: 2;
+        }
+        .imagem {
+            position: absolute;
+            left: -15%; /* Alinha à esquerda */
+            top: 70%; /* Centraliza verticalmente */
+            transform: translateY(-50%); /* Ajusta para o centro exato */
+            width: 900px; /* Define a largura como 20% da largura da tela */
+            height: auto; /* Mantém a proporção */
+            z-index: 1;
+        }
+        @media screen and (max-width: 500px) {
+            .imagem{
+                max-width: 100%; /* Para evitar que a imagem fique maior que a tela */
+                height: auto; /* Mantém a proporção */
+                margin-top: 20%;
+                margin-left: 12%;
+                z-index: 1;
+            }
+        }
+        </style>
+</head>
+<body>
+    <script> //criando um fundo de estrelas
+        const numberstar = 1300;
+        const body = document.body;
+
+        for(let i=0; i<numberstar; i++){
+            const star = document.createElement('div');
+            star.classList.add('stars');
+            star.style.left =  Math.random() * window.innerWidth + 'px';
+            star.style.top = Math.random() * window.innerHeight + 'px';
+            body.appendChild(star);
+        }
+    </script>
+    
+    <div>
+        <img src="WallE.png" alt="vixi" class="imagem">
+    </div>
+
+    <center>
+        <h1><p style="color:#ffffff">Projetos 4</p></h1>
+        <h2> <p style="color:#ffffff">Carrinho Wall-E</p></h2>
+        <div><button>Iniciar</button></div>
+        <div><button>Parar</button></div>
+        <div><button>Trajeto</button></div>
+    </center>
+
+
+</body>
+</html>
