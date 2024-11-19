@@ -11,12 +11,14 @@
             overflow: hidden;
             background:black;
             font-family: Arial, sans-serif;
+            z-index: 1;
         }
         .stars{ 
             position: absolute;
             width: 1px;
             height: 1px;
             background: #ffffff;
+            z-index: 1;
         }
         button {
             padding: 10px 30px; 
@@ -31,7 +33,7 @@
             text-align: center;
             cursor: pointer; 
             transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
-            z-index: 2;
+            z-index: 3;
         }
         .imagem {
             position: absolute;
@@ -40,15 +42,15 @@
             transform: translateY(-50%); /* Ajusta para o centro exato */
             width: 900px; /* Define a largura como 20% da largura da tela */
             height: auto; /* Mantém a proporção */
-            z-index: 1;
+            z-index: 2;
         }
         @media screen and (max-width: 500px) {
             .imagem{
                 max-width: 100%; /* Para evitar que a imagem fique maior que a tela */
                 height: auto; /* Mantém a proporção */
-                margin-top: 20%;
-                margin-left: 12%;
-                z-index: 1;
+                margin-top: 30%;
+                margin-left: -2%;
+                z-index: 2;
             }
         }
         </style>
